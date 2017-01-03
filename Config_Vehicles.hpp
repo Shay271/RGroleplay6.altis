@@ -50,6 +50,23 @@ class CarShops {
             { "B_Truck_01_fuel_F", { "", "", -1 } }
         };
     };
+	
+	class civ_donator {
+        side = "civ";
+        vehicles[] = {
+            { "C_Van_01_box_F", { "", "", -1 } },
+            { "I_Truck_02_transport_F", { "", "", -1 } },
+            { "I_Truck_02_covered_F", { "", "", -1 } },
+            { "B_Truck_01_transport_F", { "", "", -1 } },
+            { "O_Truck_03_transport_F", { "", "", -1 } },
+            { "O_Truck_03_covered_F", { "", "", -1 } },
+            { "B_Truck_01_box_F", { "", "", -1 } },
+            { "O_Truck_03_device_F", { "", "", -1 } },
+            { "C_Van_01_fuel_F", { "", "", -1 } },
+            { "I_Truck_02_fuel_F", { "", "", -1 } },
+            { "B_Truck_01_fuel_F", { "", "", -1 } }
+        };
+    };
 
     class civ_air {
         side = "civ";
@@ -84,9 +101,8 @@ class CarShops {
         side = "med";
         vehicles[] = {
             { "C_Offroad_01_F", { "", "", -1 } },
-            { "I_Truck_02_medical_F", { "", "", -1 } },
-            { "O_Truck_03_medical_F", { "", "", -1 } },
-            { "B_Truck_01_medical_F", { "", "", -1 } }
+			{ "C_Van_01_box_F", { "", "", -1 } },
+			{ "C_Hatchback_01_F", { "", "", -1 } }
         };
     };
 
@@ -114,7 +130,8 @@ class CarShops {
         side = "cop";
         vehicles[] = {
             { "B_Heli_Light_01_F", { "", "", -1 } },
-            { "B_Heli_Transport_01_F", { "life_coplevel", "SCALAR", 3 } }
+            { "B_Heli_Transport_01_F", { "life_coplevel", "SCALAR", 3 } },
+			{ "I_Heli_light_03_unarmed_F", { "life_coplevel", "SCALAR", 5 } }
         };
     };
 
@@ -315,6 +332,9 @@ class LifeCfgVehicles {
         licenses[] = { {"driver"}, {""}, {""}, {""} };
         price = 12500;
         textures[] = {
+			{ "Rockstar", "civ", {
+                "textures\ritality_gaming\civ\rockstar_offroad.paa"
+            } },
             { "Red", "civ", {
                 "\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa",
                 "\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa"
@@ -343,7 +363,7 @@ class LifeCfgVehicles {
                 "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
             } },
             { "Police", "cop", {
-                "#(ai,64,64,1)Fresnel(1.3,7)"
+                "textures\ritality_gaming\cop\scotpol_offroader.paa"
             } }
         };
     };
@@ -372,6 +392,15 @@ will modify the virtual space and the price of the vehicle, but other informatio
         licenses[] = { {"driver"}, {""}, {""}, {""} };
         price = 40000;
         textures[] = {
+			{ "Red Bull", "civ", {
+                "textures\ritality_gaming\civ\vwwrc_hbsport.paa"
+            } },
+			{ "Monster", "civ", {
+                "textures\ritality_gaming\civ\civ_monsterwrcv2_hbsport.paa"
+            } },
+			{ "Martini", "civ", {
+				"textures\ritality_gaming\civ\mcreafordwrc_hbsport.paa"
+			} },
             { "Red", "civ", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport01_co.paa"
             } },
@@ -473,6 +502,12 @@ will modify the virtual space and the price of the vehicle, but other informatio
         licenses[] = { {"driver"}, {""}, {""}, {""} };
         price = 9500;
         textures[] = {
+			{ "Dominos", "civ", {
+                "textures\ritality_gaming\civ\dominospizza_hb.paa"
+            } },
+			{ "Monster", "civ", {
+                "textures\ritality_gaming\civ\monsterwrc_hb.paa"
+            } },
             { "Beige", "civ", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base01_co.paa"
             } },
@@ -499,6 +534,9 @@ will modify the virtual space and the price of the vehicle, but other informatio
             } },
 			{ "Police", "cop", {
                 "textures\ritality_gaming\cop\scotpol_hb.paa"
+            } },
+			{ "Medic", "med", {
+                "textures\ritality_gaming\ems\paramedic_hb.paa"
             } }
         };
     };
@@ -508,6 +546,27 @@ will modify the virtual space and the price of the vehicle, but other informatio
         licenses[] = { {"driver"}, {""}, {""}, {""} };
         price = 30000;
         textures[] = {
+			{ "Taxi", "civ", {
+                "textures\ritality_gaming\civ\taxi_suv.jpg"
+            } },
+			{ "Girl", "civ", {
+                "textures\ritality_gaming\civ\girl_suv.paa"
+            } },
+			{ "Cloud", "civ", {
+                "textures\ritality_gaming\civ\cloud_suv.paa"
+            } },
+			{ "Flames", "civ", {
+                "textures\ritality_gaming\civ\flames_suv_suv.paa"
+            } },
+			{ "Ferrari", "civ", {
+                "textures\ritality_gaming\civ\donator_1_suv.paa"
+            } },
+			{ "Space", "civ", {
+                "textures\ritality_gaming\civ\donator_2_suv.paa"
+            } },
+			{ "Flames 'n' Skull", "civ", {
+                "textures\ritality_gaming\civ\donator_3_suv.paa"
+            } },
             { "Dark Red", "civ", {
                 "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa"
             } },
@@ -520,6 +579,12 @@ will modify the virtual space and the price of the vehicle, but other informatio
             { "Police", "cop", {
                 "textures\ritality_gaming\cop\scotpol_suv_white.paa"
             } },
+			{ "CSI", "cop", {
+                "textures\ritality_gaming\cop\csi_suv.jpg"
+            } },
+			{ "High Command", "cop", {
+                "textures\ritality_gaming\cop\command_suv.jpg"
+            } }
         };
     };
 
@@ -547,6 +612,10 @@ will modify the virtual space and the price of the vehicle, but other informatio
             } },
             { "Red", "civ", {
                 "\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa"
+            } },
+			{ "Medic", "med", {
+                "textures\ritality_gaming\ems\amfront.paa",
+				"textures\ritality_gaming\ems\amback.paa"
             } }
         };
     };
@@ -560,11 +629,11 @@ will modify the virtual space and the price of the vehicle, but other informatio
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             } },
-			{ "Police", "Cop", {
+			{ "Police", "cop", {
 				"textures\ritality_gaming\cop\met_police_hunter_front.paa",
 				"textures\ritality_gaming\cop\met_police_hunter_back.paa"
 			} },
-			{ "SWAT", "Cop", {
+			{ "SWAT", "cop", {
 				"textures\ritality_gaming\cop\met_swat_hunter_front.paa",
 				"textures\ritality_gaming\cop\met_swat_hunter_back.paa"
 			} }
@@ -582,6 +651,17 @@ will modify the virtual space and the price of the vehicle, but other informatio
         };
     };
 
+	class I_Heli_light_03_unarmed_F {
+		vItemSpace = 90;
+        licenses[] = { {"pilot"}, {"cAir"}, {"mAir"}, {""} };
+        price = 245000;
+        textures[] = {
+            { "Police", "cop", {
+                "textures\ritality_gaming\cop\hellcat_police.paa"
+            } }
+        };
+    };
+	
     class B_Heli_Light_01_F {
         vItemSpace = 90;
         licenses[] = { {"pilot"}, {"cAir"}, {"mAir"}, {""} };

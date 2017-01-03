@@ -141,7 +141,7 @@ class VirtualShops {
         side = "cop";
         license = "";
         level[] = { "", "", -1, "" };
-        items[] = { "donuts", "PanicButton", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit", "defibrillator" };
+        items[] = { "donuts", "panicbutton", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit", "defibrillator" };
     };
 };
 
@@ -183,15 +183,15 @@ class VirtualItems {
         icon = "icons\ico_defibrillator.paa";
     };
 	
-	class Panic_Button {
-        variable = "PanicButton";
+	class panicbutton {
+        variable = "panicbutton";
         displayName = "STR_Item_PanicButton";
-        weight = 0;
+        weight = 1;
         buyPrice = 10;
         sellPrice = 4;
         illegal = true;
         edible = -1;
-        icon = "icons\panic.paa";
+        icon = "icons\ico_panic.paa";
     };
 
     class toolkit {

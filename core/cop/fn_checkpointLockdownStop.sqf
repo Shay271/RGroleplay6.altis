@@ -8,8 +8,9 @@
 */
 
 if (Checkpoint1 getVariable "checkpoint_alarm") exitWith {
-player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 sleep 4;
+
 Checkpoint1 setVariable ["checkpoint_alarm", false, true];
-hint parseText format["<t color='#22e600'>You have turned the checkpoint alarm off.</t>"];
+
+if (playerSide isEqualTo west) then {hint parseText format["<t size='2' color='#22e600'>Checkpoint Zulu alarm has been turned off!.</t>"]};
 };

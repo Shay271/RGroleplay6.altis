@@ -7,13 +7,12 @@
 	Engage checkpoint lockdown!
 */
 
-player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 
 sleep 4;
 
 Checkpoint1 setVariable ["checkpoint_alarm", true, true];
 
-hint parseText format["<t color='#FF0000'>Checkpoint alarm sounded.</t>"];
+if (playerSide isEqualTo west) then {hint parseText format["<t size='2' color='#FF0000'>Checkpoint Zulu is under Attack!!.</t>"]};
 
 while {Checkpoint1 getVariable "checkpoint_alarm"} do {
 	[Checkpoint1 say3D "checkpointalarm",5000];
